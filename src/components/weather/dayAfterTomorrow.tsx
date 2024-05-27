@@ -5,11 +5,14 @@ import axios from 'axios';
 import WeatherCard from '../cards/weatherCard';
 
 interface WeatherData {
-    current: {
-        temp_c: number;
-        condition: {
-            text: string;
-        };
+    forecast: {
+        forecastday: {
+            2: {
+                day: {
+                    avgtemp_c: number
+                }
+            }
+        }
     };
 }
 
@@ -22,7 +25,7 @@ function DayAfterTomorrow() {
     const [data, setData] = useState<WeatherData | null>(null);
 
     useEffect(() => {
-        axios.get(`${api.url}/forecast.json?key=${api.key}&q=Netherlands&days=2`)
+        axios.get(`${api.url}/forecast.json?key=${api.key}&q=Netherlands&days=3`)
             .then(response => {
                 setData(response.data);
             })
@@ -34,7 +37,7 @@ function DayAfterTomorrow() {
     return (
         <>
             {  data && (
-                    <WeatherCard graden={data.current.temp_c} dag="Overmorgen" />
+                    <WeatherCard graden={data.forecast.forecastday[2].day.avgtemp_c} dag="Overmorgen" />
                 )
             }
         </>

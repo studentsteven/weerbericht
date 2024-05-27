@@ -9,7 +9,7 @@ footer {
 export default function Info() {
     return (
         <>
-            <div className="mt-[120px] mb-10 text-center">'
+            <div className="container py-20 text-center">
                 <h1>Info</h1>
                 <p>Created by Steven Roest</p>
             </div>

@@ -9,6 +9,7 @@ interface WeatherData {
         temp_c: number;
         condition: {
             text: string;
+            icon: string;
         };
     };
 }
@@ -34,7 +35,7 @@ function Today() {
     return (
         <>
             {  data && (
-                    <WeatherCard graden={data.current.temp_c} dag="Vandaag" />
+                    <WeatherCard graden={data.current.temp_c} dag="Vandaag" icon={data.current.condition.icon} />
                 )
             }
         </>

@@ -3,7 +3,7 @@ import "./globals.css";
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: "Home | Weerbericht",
+  title: "Home | HollandsWeer",
   description: "De website voor actuele weerinformatie!",
 };
 
@@ -15,11 +15,14 @@ export default function RootLayout({
   return (
     <html lang="en">      
       <body>
-        <nav className="fixed inset-x-0 mx-auto container flex items-center gap-3 bg-white m-3 rounded-xl top-3 justify-between shadow-md">
-          <a href="/" title="Homepagina"><Image src="/weather.svg" width={75} height={75} alt='Weather Logo' className="mx-5" /></a>
-          <ul className="flex gap-3 mx-10">
+        <nav className="flex items-center gap-3 bg-white justify-between">
+          <div className="flex justify-center md:block">
+            <a href="/" title="Homepagina"><Image src="/weather.svg" width={75} height={75} alt='Weather Logo' className="mx-5" /></a>
+          </div>
+          <ul className="gap-3 mx-10 hidden md:flex">
             <li><a href="/">Homepagina</a></li>
-            <li>Steden</li>
+            <li><a href="/komendedagen">Komende Dagen</a></li>
+            {/* <li>Steden</li> */}
             <li><a href="/info">Info</a></li>
           </ul>
         </nav>

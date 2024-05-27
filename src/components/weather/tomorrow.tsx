@@ -5,11 +5,14 @@ import axios from 'axios';
 import WeatherCard from '../cards/weatherCard';
 
 interface WeatherData {
-    current: {
-        temp_c: number;
-        condition: {
-            text: string;
-        };
+    forecast: {
+        forecastday: {
+            1: {
+                day: {
+                    avgtemp_c: number
+                }
+            }
+        }
     };
 }
 
@@ -34,7 +37,7 @@ function Tomorrow() {
     return (
         <>
             {  data && (
-                    <WeatherCard graden={data.current.temp_c} dag="Morgen" />
+                    <WeatherCard graden={data.forecast.forecastday[1].day.avgtemp_c} dag="Morgen" />
                 )
             }
         </>
