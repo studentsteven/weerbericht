@@ -15,9 +15,9 @@ export default function RootLayout({
   return (
     <html lang="en">      
       <body>
-        <nav className="flex items-center gap-3 bg-white justify-between">
+        <nav className="flex items-center gap-3 bg-white justify-between sticky top-0 z-40 shadow-lg px-5">
           <div className="flex justify-center md:block">
-            <a href="/" title="Homepagina"><Image src="/weather.svg" width={75} height={75} alt='Weather Logo' className="mx-5" /></a>
+            <a href="/" title="Homepagina"><Image src="/weather.svg" width={50} height={75} alt='Weather Logo' /></a>
           </div>
           <ul className="gap-3 mx-10 hidden md:flex">
             <li><a href="/">Homepagina</a></li>
@@ -25,16 +25,26 @@ export default function RootLayout({
             {/* <li>Steden</li> */}
             <li><a href="/info">Info</a></li>
           </ul>
+          <div className="flex md:hidden text-[25px]">
+            ☰
+          </div>
         </nav>
 
         {children}
 
-        <footer className="flex w-full">
-          <div className="container mx-auto p-5">
-            <Image src="/weather.svg" width={75} height={75} alt='Weather Logo' />
-            <h3>Weerbericht</h3>
-          </div>
-        </footer>
+
+<div className="w-full">
+  <img src="/city.png" alt="Cartoon van een stad" />
+  <footer className="w-full">
+     <div className="container mx-auto p-5">
+       <Image src="/weather.svg" width={75} height={75} alt='Weather Logo' />
+       <strong>HollandsWeer</strong><br/>
+       <i>Made by Steven Roest</i><br/>
+       <small>hollandsweer.nl</small>
+     </div>
+   </footer>
+</div>
+        
       </body>
     </html>
   );

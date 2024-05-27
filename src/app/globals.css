@@ -4,6 +4,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+body {
+  background: linear-gradient(135deg, rgba(54,121,175,1) 0%, rgba(164,179,235,1) 100%);
+}
+
 .center {
   display: flex;
   place-items: center;
@@ -16,12 +20,8 @@ h1 {
   font-weight: 600;
 }
 
-html {
-  background-color: #d3f4ff;
-}
-
 footer {
-  background-color: #00000009;
+  background-color: #BDBDBD;
 }
 
 .weerItem {

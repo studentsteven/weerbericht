@@ -1,5 +1,7 @@
 "use client";
 
+import styles from "@/components/search.module.css";
+
 export default function Search() {
     function search(e: any) {
         if(e.keyCode === 13) {
@@ -30,12 +32,12 @@ export default function Search() {
                     type="search" 
                     placeholder="Stad zoeken..." 
                     id="stadSearch" 
-                    className="bg-white p-3 rounded-full w-full focus:border-cyan-100" 
+                    className={styles.searchbar}
                     onKeyDown={search} 
                 />
                 <button 
                     onClick={klikSearch} 
-                    className="rounded-full bg-slate-400 h-[48px] w-[48px] flex justify-center items-center"
+                    className={styles.searchbutton}
                 >
                     <img src="https://static-00.iconduck.com/assets.00/search-icon-2048x2048-cmujl7en.png" alt="" height={25} width={25} />
                 </button>

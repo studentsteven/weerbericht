@@ -1,10 +1,4 @@
-"use client";
-
-const css = `
-footer {
-    display: none;
-}
-`
+import ThreeDays from "@/components/threedays";
 
 export default function Info() {
     return (

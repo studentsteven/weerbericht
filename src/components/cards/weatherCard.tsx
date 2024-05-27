@@ -6,7 +6,7 @@ type WeatherCardProps = {
 
 export default function WeatherCard({ graden, dag, icon }: WeatherCardProps) {
     return (
-        <div className="weerItem relative">
+        <div className="weerItem relative text-black">
             <img src={icon} alt="" className="absolute top-2 right-2" />
             <p>{dag}</p>
             <h1>{graden}°</h1>

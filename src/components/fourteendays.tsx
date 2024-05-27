@@ -21,11 +21,11 @@ import { useEffect, useState } from "react";
 import WeatherCard from "./cards/weatherCard";
 import axios from "axios";
 
-export default function ThreeDays() {
+export default function FourteenDays() {
     const [weather, setWeather] = useState<ForecastDay[]>([]);
 
     useEffect(() => {
-        axios.get(`${api.url}/forecast.json?key=${api.key}&q=Netherlands&days=3`)
+        axios.get(`${api.url}/forecast.json?key=${api.key}&q=Netherlands&days=14`)
             .then(res => {
                 setWeather(res.data.forecast.forecastday);
             })
