@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function KomendeDagen() {
     return (
         <>
-            <div className="container pt-20 pb-0 text-center text-white">
+            <div className="container pt-20 mt-10 pb-0 text-center text-white">
                 <h1>Weer komende dagen in...</h1>
                 <Search />
             </div>

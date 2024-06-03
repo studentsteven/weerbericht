@@ -1,6 +1,8 @@
 "use client";
 
 import styles from "@/components/search.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 export default function Search() {
     function search(e: any) {
@@ -39,7 +41,7 @@ export default function Search() {
                     onClick={klikSearch} 
                     className={styles.searchbutton}
                 >
-                    <img src="https://static-00.iconduck.com/assets.00/search-icon-2048x2048-cmujl7en.png" alt="" height={25} width={25} />
+                    <FontAwesomeIcon icon={faMagnifyingGlass} color="#000000" width={25} height={25} />
                 </button>
             </div>
         </div>

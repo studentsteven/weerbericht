@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div>
       <iframe
-        className="w-full h-[500px]"
+        className="w-full h-[500px] mt-[65px]"
         src="https://www.openstreetmap.org/export/embed.html?bbox=0.9010837312767795%2C50.49595785216966%2C8.904623770339281%2C53.48150827154005&amp;layer=mapnik"
       ></iframe>
       <div className="container mx-auto my-20 text-white">
